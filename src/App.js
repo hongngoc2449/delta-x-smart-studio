@@ -1,25 +1,81 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import Flow from './components/Flow';
+import Vision from './components/Vision';
 import './App.css';
 
+// Import SVG icons
+import dashboardIcon from './assets/icons/DashboardIcon.svg';
+import flowIcon from './assets/icons/FlowIcon.svg';
+import visionIcon from './assets/icons/VisionIcon.svg';
+import playIcon from './assets/icons/PlayIcon.svg';
+import stopIcon from './assets/icons/StopIcon.svg';
+
 function App() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header-container">
+        <div className="header">
+          <div className="button-wrapper">
+            <div className="button-icon">
+              <img src={playIcon} alt="Play" className="header-icon" />
+            </div>
+            <div className="button-icon">
+              <img src={stopIcon} alt="Stop" className="header-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content">
+        <div className="sidebar">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/Dashboard">
+                  <div className={`tabIcon-wrapper ${currentPath === '/Dashboard' ? 'active' : ''}`}>
+                    <img src={dashboardIcon} alt="Dashboard" className="icon" />
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Flow">
+                  <div className={`tabIcon-wrapper ${currentPath === '/Flow' ? 'active' : ''}`}>
+                    <img src={flowIcon} alt="Flow" className="icon" />
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Vision">
+                  <div className={`tabIcon-wrapper ${currentPath === '/Vision' ? 'active' : ''}`}>
+                    <img src={visionIcon} alt="Vision" className="icon" />
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="main-content">
+          <Routes>
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Flow" element={<Flow />} />
+            <Route path="/Vision" element={<Vision />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default AppWrapper;
