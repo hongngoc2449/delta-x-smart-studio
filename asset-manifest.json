@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/delta-x-smart-studio/static/css/main.81822e7a.css",
+    "main.js": "/delta-x-smart-studio/static/js/main.84ed602b.js",
+    "static/js/453.0152755b.chunk.js": "/delta-x-smart-studio/static/js/453.0152755b.chunk.js",
+    "static/media/VisionIcon.svg": "/delta-x-smart-studio/static/media/VisionIcon.aaa4670d51265b3e00e238eb1d30b5cf.svg",
+    "static/media/DashboardIcon.svg": "/delta-x-smart-studio/static/media/DashboardIcon.a58dd259818a6278fa19e61dab55136e.svg",
+    "static/media/FlowIcon.svg": "/delta-x-smart-studio/static/media/FlowIcon.f2e8eef9373ab21a9dfde7555e73a9df.svg",
+    "index.html": "/delta-x-smart-studio/index.html",
+    "static/media/PlayIcon.svg": "/delta-x-smart-studio/static/media/PlayIcon.2df6721a687d4b71ef99c51fd0532a23.svg",
+    "static/media/StopIcon.svg": "/delta-x-smart-studio/static/media/StopIcon.18fcba15ce1a6f8965504ff455dfad05.svg",
+    "main.81822e7a.css.map": "/delta-x-smart-studio/static/css/main.81822e7a.css.map",
+    "main.84ed602b.js.map": "/delta-x-smart-studio/static/js/main.84ed602b.js.map",
+    "453.0152755b.chunk.js.map": "/delta-x-smart-studio/static/js/453.0152755b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81822e7a.css",
+    "static/js/main.84ed602b.js"
+  ]
+}
